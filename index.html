@@ -11,18 +11,68 @@
   <body>
 
     <div class="container">
+
+      <!-- form dati prenotazione -->
       <h1>Calcola il prezzo del tuo biglietto</h1>
-      <div id="ticket-sell">
+      <div id="form_ticket">
         <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
+          <div class="col">
+            <label for="nome">Nome Cognome</label>
+            <input type="text" name="nome" placeholder="Inserisci il tuo nome">
+          </div>
+          <div class="col">
+            <label for="km">Km da percorrere</label>
+            <input type="number" min="1" name="km" placeholder="Inserisci i km">
+          </div>
+          <div class="col">
+            <label for="fascia-eta">Fascia d'et&agrave;</label>
+            <select name="fascia-eta">
+              <option value="minorenne">Minorenne</option>
+              <option value="standard">Maggiorenne</option>
+              <option value="over65">Over 65</option>
+            </select>
+          </div>
         </div>
-        <div class="row">
-          <button id="genera"></button>
-          <button id="annulla"></button>
+        <div class="row row_button">
+          <button id="genera" class="btn">Genera</button>
+          <button id="annulla" class="btn">Annulla</button>
         </div>
       </div>
+      <!-- form dati prenotazione -->
+
+      <!-- riepilogo dati prenotazione biglietto -->
+      <h1>Il tuo biglietto</h1>
+      <div id="ticket_resume">
+        <h3>Dettaglio passeggeri</h3>
+        <div class="ticket_info">
+          <div class="ticket_info_name">
+            <h3>Nome Passeggero</h3>
+            <div id="nome_ticket">Pippo</div>
+          </div>
+          <div class="ticket_info_promo">
+            <table>
+              <thead>
+                <tr>
+                  <th>Offerta</th>
+                  <th>Carrozza</th>
+                  <th>Codice CP</th>
+                  <th>Costo Biglietto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="promo_ticket"></td>
+                  <td id="carrozza_ticket"></td>
+                  <td id="codice_ticket"></td>
+                  <td id="price_ticket"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- /riepilogo dati prenotazione biglietto -->
+
     </div>
 
     <script src="js/script.js" charset="utf-8"></script>
