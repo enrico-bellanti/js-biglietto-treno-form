@@ -14,7 +14,7 @@ genera.addEventListener('click',
     var promoTicket = "Standard";
 
 
-    if (isNaN(nome) && km!=="" && eta!="") {
+    if (isNaN(nome) && !isNaN(km) && km!=="" && km!== "0" && eta!="") {
       // calcolo prezzo biglietto e stampo a schermo
       var prezzoKm = 0.21;
       var ticketCost = prezzoKm * km;
@@ -43,8 +43,8 @@ genera.addEventListener('click',
 
       ticket.classList.add("show");
 
-    } else{
-        alert("perfavore inserisci correttamente i dati");
+    } else {
+        alert("Perfavore inserisci correttamente i dati");
         // cancella ticket
         ticket.classList.remove("show");
         // reset form
