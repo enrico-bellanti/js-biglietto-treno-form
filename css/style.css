@@ -25,6 +25,7 @@ label{
 }
 
 input, select{
+  width: 170px;
   height: 30px;
   font-size: 16px;
   text-align: center;
@@ -47,6 +48,10 @@ input::placeholder {
   margin: auto;
   padding-top: 30px;
 }
+
+
+/* ticket */
+
 
 #form_ticket{
   background-color: #fff;
@@ -73,12 +78,26 @@ input::placeholder {
   padding: 5px;
   margin: 0 10px;
   background-color: #cccccc;
-  border: 1px solid #808080;
+  border: 2px solid #b91450;
   border-radius: 5px;
   color: #b91450;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+}
+.btn:hover{
+  border: 2px solid #000;
+  background-color: #808080;
+}
+
+/* Stampa del biglietto */
+
+#ticket_wrapper{
+  opacity: 0;
+}
+
+#ticket_wrapper.show{
+  opacity: 1;
 }
 
 #ticket_resume{
@@ -90,10 +109,39 @@ input::placeholder {
 }
 .ticket_info_name{
   padding: 20px;
+  width: 25%;
+  min-width: 145px;
 }
 .ticket_info_promo{
+  width: 75%;
   padding: 20px;
 }
 .ticket_info_name{
   background-color: #808080;
+}
+
+th, td{
+  text-align: left;
+  width: calc(70% / 4);
+}
+
+@media (max-width: 768px) {
+  /* riga superiore */
+  .row_input {
+    flex-direction: column;
+  }
+  .col{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 50px;
+  }
+  label{
+    width: 150px;
+  }
+  /* biglietto */
+  .ticket_info_promo{
+    width: 100%;
+  }
+
 }
